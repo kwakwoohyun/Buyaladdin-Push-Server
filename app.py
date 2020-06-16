@@ -9,6 +9,11 @@ push_service = FCMNotification(
 nth = 0
 
 
+@app.route('/', methods=['GET'])
+def test():
+    return "test"
+
+
 @app.route('/push', methods=['POST'])
 def push():
     global nth
